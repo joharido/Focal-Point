@@ -1,35 +1,46 @@
 import { useState } from "react";
+import AddTask from "./components/AddTask";
 import Header from "./components/Header";
 import Tasks from "./components/tasks";
 
-
 function App() {
+  const [showAddTask, setShowAddTask] = useState(false);
   const [tasks, setTasks] = useState([
     {
       id: 1,
-      text: "Doctors appointment",
-      day: "Feb 5th at 2:30 pm",
+      task: "Doctors appointment",
+      date: "2021-08-15",
+      time: "2:30 pm",
       reminder: true,
     },
     {
       id: 2,
-      text: "Doctors appointment",
-      day: "Feb 5th at 2:30 pm",
+      task: "Doctors appointment",
+      date: "2021-08-15",
+      time: "2:30 pm",
       reminder: true,
     },
     {
       id: 3,
-      text: "Doctors appointment",
-      day: "Feb 5th at 2:30 pm",
+      task: "Doctors appointment",
+      date: "2021-08-15",
+      time: "2:30 pm",
       reminder: false,
     },
     {
       id: 4,
-      text: "Doctors appointment",
-      day: "Feb 5th at 2:30 pm",
+      task: "Doctors appointment",
+      date: "2021-08-15",
+      time: "2:30 pm",
       reminder: false,
     },
   ]);
+  const addTask = (task) => {
+    const id = Math.floor(Math.random() * 10000) + 1;
+    const newTask = { id, ...task };
+    console.log(newTask);
+    setTasks([...tasks, newTask]);
+  };
   const deleteTask = (id) => {
     console.log(id);
     setTasks(tasks.filter((task) => task.id !== id));
@@ -41,9 +52,16 @@ function App() {
       )
     );
   };
+
   return (
     <div className="container">
-      <Header />
+      <Header
+        headerTitle = {'Focal Point'}
+        onClick={() => setShowAddTask(!showAddTask)}
+        showAddTask={showAddTask}
+      />
+      {showAddTask ? <AddTask onAdd={addTask} /> : ""}
+
       {tasks.length > 0 ? (
         <Tasks
           tasks={tasks}
@@ -51,7 +69,7 @@ function App() {
           onDblClick={toggleReminder}
         />
       ) : (
-        "No Tasks Remain"
+        "Woohoo! you're done! go have a coffee"
       )}
     </div>
   );
