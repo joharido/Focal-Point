@@ -1,0 +1,39 @@
+{
+  "tasks": [
+    {
+      "id": 1,
+      "task": "Doctors appointment",
+      "date": "2021-08-15",
+      "time": "2:30 pm",
+      "reminder": true
+    },
+    {
+      "id": 2,
+      "task": "Doctors appointment",
+      "date": "2021-08-15",
+      "time": "2:30 pm",
+      "reminder": true
+    },
+    {
+      "id": 3,
+      "task": "Doctors appointment",
+      "date": "2021-08-15",
+      "time": "2:30 pm",
+      "reminder": false
+    },
+    {
+      "task": "Take Bloop for ice cream",
+      "date": "2021-08-15",
+      "time": "03:35 PM",
+      "reminder": true,
+      "id": 5
+    },
+    {
+      "task": "Take Pingu for ice cream",
+      "date": "2021-08-15",
+      "time": "06:36 PM",
+      "reminder": false,
+      "id": 6
+    }
+  ]
+}
