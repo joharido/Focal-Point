@@ -50,7 +50,6 @@ const App = () => {
 
   const toggleReminder = async (id: string) => {
     const taskFetched = await fetchTask(id);
-    console.log(taskFetched);
     const updatedTask = { ...taskFetched, reminder: !taskFetched.reminder };
     const response = await fetch(`http://localhost:5000/tasks/${id}`, {
       method: "PUT",
@@ -60,7 +59,6 @@ const App = () => {
       body: JSON.stringify(updatedTask),
     });
     const data = await response.json();
-    console.log(data);
     setTasks(
       tasks.map((task: any) =>
         task.id === id ? { ...task, reminder: data.reminder } : task
