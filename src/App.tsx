@@ -73,7 +73,7 @@ const App = () => {
         headerTitle={"Focal Point"}
         setShowAddTask={setShowAddTask}
         showAddTask={showAddTask}
-      ></Header>
+      />
       {showAddTask ? <AddTask onAdd={addTask} /> : ""}
 
       {tasks.length > 0 ? (
