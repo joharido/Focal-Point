@@ -1,6 +1,12 @@
 import { FaWindowClose } from "react-icons/fa";
 
-const Task = ({ task, onDelete, onDblClick }) => {
+interface TaskProps {
+  task: any;
+  onDelete: any;
+  onDblClick: any;
+}
+
+const Task = ({ task, onDelete, onDblClick }: TaskProps) => {
   return (
     <div
       className={`task ${task.reminder ? "reminder" : ""}`}
