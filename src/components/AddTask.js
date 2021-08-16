@@ -13,7 +13,7 @@ import {
 } from "@material-ui/pickers";
 import { useStyles } from "./AddTaskStyles";
 
-const AddTask = (onAdd) => {
+const AddTask = ({onAdd}) => {
   const classes = useStyles();
   const [task, setTask] = React.useState("");
   const [reminder, setReminder] = React.useState(false);

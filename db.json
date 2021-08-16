@@ -8,27 +8,6 @@
       "reminder": true
     },
     {
-      "id": 2,
-      "task": "Doctors appointment",
-      "date": "2021-08-15",
-      "time": "2:30 pm",
-      "reminder": true
-    },
-    {
-      "task": "Take Bloop for ice cream",
-      "date": "2021-08-15",
-      "time": "03:35 PM",
-      "reminder": true,
-      "id": 5
-    },
-    {
-      "task": "Take Pingu for ice cream",
-      "date": "2021-08-15",
-      "time": "06:36 PM",
-      "reminder": true,
-      "id": 6
-    },
-    {
       "task": "Take the dog for a walk",
       "date": "2021-08-28",
       "time": "06:35 PM",
@@ -36,18 +15,18 @@
       "id": 7
     },
     {
-      "task": "Take Chingu to restaurant ",
-      "date": "2021-08-27",
-      "time": "12:36 PM",
-      "reminder": true,
-      "id": 8
-    },
-    {
       "task": "Go get coffee",
       "date": "2021-08-27",
       "time": "12:07 PM",
-      "reminder": true,
+      "reminder": false,
       "id": 9
+    },
+    {
+      "task": "Go to the park",
+      "date": "2021-08-16",
+      "time": "11:13 AM",
+      "reminder": false,
+      "id": 10
     }
   ]
 }
