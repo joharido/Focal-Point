@@ -1,5 +1,5 @@
 import Task from "./Task";
-const Tasks = ({ tasks, onDelete, onDblClick }) => {
+const Tasks = ({tasks, onDelete, onDblClick}) => {
     return (
         <>
             {tasks.map((task) => {

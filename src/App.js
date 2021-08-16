@@ -2,8 +2,12 @@ import { useState, useEffect } from "react";
 import AddTask from "./components/AddTask";
 import Header from "./components/Header";
 import Tasks from "./components/tasks";
+import LocalCafeTwoToneIcon from '@material-ui/icons/LocalCafeTwoTone';
+import Icon from '@material-ui/core/Icon';
+import Particles from 'react-particles-js';
+import ParticlesBg from 'particles-bg'
 
-function App() {
+const App = () => {
   const [showAddTask, setShowAddTask] = useState(false);
   const [tasks, setTasks] = useState([]);
 
@@ -27,9 +31,6 @@ function App() {
   };
 
   const addTask = async (task) => {
-    // const id = Math.floor(Math.random() * 10000) + 1;
-    // const newTask = { id, ...task };
-    // setTasks([...tasks, newTask]);
     const res = await fetch("http://localhost:5000/tasks", {
       method: "POST",
       headers: {
@@ -43,15 +44,17 @@ function App() {
   };
 
   const deleteTask = async (id) => {
-    await fetch(`http://localhost:5000/tasks/${id}`, {
+    const response = await fetch(`http://localhost:5000/tasks/${id}`, {
       method: "DELETE",
     });
+    const data = await response.json();
+    console.log(data);
     setTasks(tasks.filter((task) => task.id !== id));
   };
 
   const toggleReminder = async (id) => {
     const taskFetched = await fetchTask(id);
-    console.log(taskFetched)
+    console.log(taskFetched);
     const updatedTask = { ...taskFetched, reminder: !taskFetched.reminder };
     const response = await fetch(`http://localhost:5000/tasks/${id}`, {
       method: "PUT",
@@ -61,15 +64,17 @@ function App() {
       body: JSON.stringify(updatedTask),
     });
     const data = await response.json();
+    console.log(data);
     setTasks(
       tasks.map((task) =>
-      task.id === id ? { ...task, reminder: data.reminder } : task
+        task.id === id ? { ...task, reminder: data.reminder } : task
       )
     );
   };
 
   return (
     <div className="container">
+      <ParticlesBg type="square" bg={true} />
       <Header
         headerTitle={"Focal Point"}
         onClick={() => setShowAddTask(!showAddTask)}
@@ -84,7 +89,9 @@ function App() {
           onDblClick={toggleReminder}
         />
       ) : (
-        "Woohoo! you're done! go have a coffee"
+        <div>
+          Woohoo! you're done! go have a coffee <LocalCafeTwoToneIcon/>
+        </div>
       )}
     </div>
   );
