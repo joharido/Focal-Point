@@ -1,9 +1,17 @@
 import { FaWindowClose } from "react-icons/fa";
 
 interface TaskProps {
-  task: any;
+  task: TaskType;
   onDelete: any;
   onDblClick: any;
+}
+export interface TaskType {
+  id: number,
+  task: string,
+  date: string,
+  time: string,
+  reminder: boolean
+  
 }
 
 const Task = ({ task, onDelete, onDblClick }: TaskProps) => {

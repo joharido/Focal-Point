@@ -1,8 +1,8 @@
 import React from "react";
-import Task from "./Task";
+import Task, {TaskType} from "./Task";
 
 interface TasksProps {
-  tasks: any;
+  tasks: Array<TaskType>;
   onDelete: any;
   onDblClick: any;
 }
@@ -14,7 +14,7 @@ const Tasks = ({
 }: TasksProps) => {
   return (
     <>
-      {tasks.map((task: any) => {
+      {tasks.map((task: TaskType) => {
         return (
           <Task
             key={task.id}
