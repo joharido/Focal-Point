@@ -2,7 +2,7 @@
 
 A simple web app designed to track a user's everyday todo's!
 
-## Gallary
+## Gallery
 
 
 
