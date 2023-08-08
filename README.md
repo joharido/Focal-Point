@@ -5,7 +5,8 @@ A simple web app designed to track a user's everyday todo's!
 ## Gallary
 
 
-![4](https://github.com/joharido/Focal-Point/assets/45051592/e5246c78-64d9-490d-9808-8cb2a13cd238)
-![3](https://github.com/joharido/Focal-Point/assets/45051592/3a8ede6d-ed21-49d0-a8a5-20a8a8c540c1)
-![2](https://github.com/joharido/Focal-Point/assets/45051592/70853808-a12f-4efe-a16c-375990698ad7)
-![1](https://github.com/joharido/Focal-Point/assets/45051592/f49821e8-4c2d-42f4-b9c9-d3d371b45ab8)
+
+![1](https://github.com/joharido/Focal-Point/assets/45051592/1a8ec7d4-cbf0-4c8d-b681-c598dac4e827)
+![2](https://github.com/joharido/Focal-Point/assets/45051592/8699a240-8200-41e4-8c1d-3caf4b996b09)
+![3](https://github.com/joharido/Focal-Point/assets/45051592/ad9a11af-88e0-4bf9-a837-6aa3f231a5a3)
+![4](https://github.com/joharido/Focal-Point/assets/45051592/649ef8ce-5337-4a9c-882c-7a309b4dd7f6)
